@@ -1,0 +1,74 @@
+<!-- <meta http-equiv="Refresh" content="0; url='/calc.html" /> -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Node.js Calculator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+  <!--Google font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!--Icon: fontawesome-->
+  <script src="https://kit.fontawesome.com/a62f436beb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <!--header-->
+    <header class="header">
+      <h1>Node.js Calculator App</h1>
+    </header>
+    <!--main-->
+    <div class="main">
+
+      <!-- CALCULATOR FORM -->
+      <input data-previous type="text" class="numInput" id="numInput" value="0" disabled />
+      <input data-current type="text" class="result" id="result" value="" disabled />
+
+      <form class="calculator" method="POST" action="/">
+        <input type="button" value="C" data-clear class="calc-button clear" id="C" />
+        <input type="button" value="+/-" data-plusMinus class="calc-button plusMinus" id="plusMinus" />
+        <input type="button" value="%" data-percent class="calc-button percent" id="percent" />
+        <input type="button" value="/" data-operator class="calc-button operator" id="div" />
+
+        <input type="button" value="7" data-number class="calc-button number" id="seven" />
+        <input type="button" value="8" data-number class="calc-button number" id="eight" />
+        <input type="button" value="9" data-number class="calc-button number" id="nine" />
+        <input type="button" value="x" data-operator class="calc-button operator" id="mul" />
+
+        <input type="button" value="4" data-number class="calc-button number" id="four" />
+        <input type="button" value="5" data-number class="calc-button number" id="five" />
+        <input type="button" value="6" data-number class="calc-button number" id="six" />
+        <input type="button" value="-" data-operator class="calc-button operator" id="minus" />
+
+        <input type="button" value="1" data-number class="calc-button number" id="one" />
+        <input type="button" value="2" data-number class="calc-button number" id="two" />
+        <input type="button" value="3" data-number class="calc-button number" id="three" />
+        <input type="button" value="+" data-operator class="calc-button operator plus" id="plus" />
+
+        <input type="button" value="0" data-number class="calc-button number" id="zero" />
+        <input type="button" value="." data-number class="calc-button number" id="point" />
+        <input type="submit" value="=" data-equals class="calc-button equals" id="equals" />
+      </form>
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+      <p>
+        @Yuki Matsubara all right reserved. 2021/08.
+        <a href="https://www.linkedin.com/in/yukimatsubara/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/YukiRamu" target="_blank"><i class="fab fa-github-square"></i></a>
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>

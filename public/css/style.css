@@ -1,0 +1,96 @@
+:root {
+  --primary: rgb(115, 26, 52);
+  --primaryGrad: rgb(163, 42, 54);
+  --secondary: rgb(29, 32, 42);
+  --third: rgb(138, 39, 72);
+  --thirdGrad: rgb(179, 64, 72);
+  --text1: #ffffff;
+  --text2: #d24c4d;
+  --text3: rgb(185, 181, 181);
+  --accent: #ffcc99;
+}
+.header {
+  padding: 1em;
+  color: var(--text1);
+  padding: 0.5rem 0;
+}
+/* body */
+body {
+  min-height: 100vh;
+  background: linear-gradient(var(--primary), var(--primaryGrad));
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  line-height: unset;
+  background: linear-gradient(var(--primary), var(--primaryGrad));
+  background-repeat: no-repeat;
+  font-family: "Roboto", sans-serif;
+}
+.main {
+  flex: 1;
+  margin: auto;
+  height: 100%;
+  width: 30%;
+  box-shadow: 0 0 3em var(--secondary);
+}
+.main input {
+  width: 100%;
+  text-align: right;
+  border: none;
+  color: var(--text1);
+}
+.main .numInput {
+  background-color: var(--third);
+  font-size: 2em;
+  color: var(--text3);
+}
+.main .result {
+  font-size: 3.5em;
+  background: linear-gradient(var(--third), var(--thirdGrad));
+}
+/* Calc styling*/
+.calculator {
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  background-color: var(--secondary);
+}
+.calculator input {
+  padding: 0.5em 0.5em;
+  font-size: 2em;
+  border: none;
+  color: var(--text2);
+  background-color: var(--secondary);
+}
+.calculator input:hover {
+  background-color: var(--accent);
+}
+.calculator input:active {
+  color: var(--secondary);
+}
+.calculator .plus {
+  grid-row: span 2;
+}
+.calculator .operator {
+  color: var(--accent);
+}
+.calculator .operator:hover {
+  color: var(--text2);
+}
+
+/* footer*/
+.footer {
+  text-align: center;
+  color: var(--text1);
+  padding-top: 0.5rem;
+}
+.footer i {
+  color: var(--accent);
+}
+.footer i:hover {
+  color: var(--text1);
+}
