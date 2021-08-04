@@ -1,31 +1,29 @@
-/* Configure Router */
+/* Configure Router : this will be imported into index.js (main node js) */
 const express = require("express");
 const router = express.Router();
-const bodyparser = require("body-parser");
 
 router.use(express.static(__dirname + '/public'));
 
-router.use(bodyparser.urlencoded({ extended: true }));
+router.use(express.urlencoded());
+//router.use(express.json());
 
-router.use(bodyparser.json());
-
-////////////////////
-
-router.get('/:num', function (req, res) {
+router.get('/', (req, res) => {
+  console.log(req);
+  console.log(res);
   console.log("dirname", __dirname);
   console.log("paramname", req.params.num);
-  res.sendFile(__dirname + "/index.html"); //if html file is within public directory
+  //res.sendFile(__dirname + "/index.html"); //if html file is within public directory
 });
 
-router.post('/', function (req, res) {
+router.post('/', (req, res) => {
+
   const data = req.body;
-  res.send(data);
+  // res.send(data);
   console.log("req data is", data);
 });
 
 
-
-/////////////////// Working on it //////////////////////////////
+//////////////// Working on it : not used : try and error //////////////////////
 
 //api for calculate function
 // router.get("/add/:num1/:num2", (req, res) => {

@@ -1,6 +1,5 @@
 <!-- <meta http-equiv="Refresh" content="0; url='/calc.html" /> -->
 
-
 <!DOCTYPE html>
 <html>
 
@@ -30,33 +29,35 @@
     <div class="main">
 
       <!-- CALCULATOR FORM -->
-      <input data-previous type="text" class="numInput" id="numInput" value="0" disabled />
-      <input data-current type="text" class="result" id="result" value="" disabled />
+      <input data-previous type="text" class="numInput" value="0" disabled />
+      <input data-current type="text" class="result" value="" disabled />
 
-      <form class="calculator" method="POST" action="/">
-        <input type="button" value="C" data-clear class="calc-button clear" id="C" />
-        <input type="button" value="+/-" data-plusMinus class="calc-button plusMinus" id="plusMinus" />
-        <input type="button" value="%" data-percent class="calc-button percent" id="percent" />
-        <input type="button" value="/" data-operator class="calc-button operator" id="div" />
+      <form class="calculator" method="POST" action="/" onsubmit="calculate()">
+        <input type="button" value="C" data-clear class="calc-button clear" />
+        <input type="button" value="+/-" data-plusMinus class="calc-button plusMinus" />
+        <input type="button" value="%" data-percent class="calc-button percent" />
+        <input type="button" value="/" data-operator class="calc-button operator" />
 
-        <input type="button" value="7" data-number class="calc-button number" id="seven" />
-        <input type="button" value="8" data-number class="calc-button number" id="eight" />
-        <input type="button" value="9" data-number class="calc-button number" id="nine" />
-        <input type="button" value="x" data-operator class="calc-button operator" id="mul" />
+        <input type="button" value="7" data-number class="calc-button number" />
+        <input type="button" value="8" data-number class="calc-button number" />
+        <input type="button" value="9" data-number class="calc-button number" />
+        <input type="button" value="x" data-operator class="calc-button operator" />
 
-        <input type="button" value="4" data-number class="calc-button number" id="four" />
-        <input type="button" value="5" data-number class="calc-button number" id="five" />
-        <input type="button" value="6" data-number class="calc-button number" id="six" />
-        <input type="button" value="-" data-operator class="calc-button operator" id="minus" />
+        <input type="button" value="4" data-number class="calc-button number" />
+        <input type="button" value="5" data-number class="calc-button number" />
+        <input type="button" value="6" data-number class="calc-button number" />
+        <input type="button" value="-" data-operator class="calc-button operator" />
 
-        <input type="button" value="1" data-number class="calc-button number" id="one" />
-        <input type="button" value="2" data-number class="calc-button number" id="two" />
-        <input type="button" value="3" data-number class="calc-button number" id="three" />
-        <input type="button" value="+" data-operator class="calc-button operator plus" id="plus" />
+        <input type="button" value="1" data-number class="calc-button number" />
+        <input type="button" value="2" data-number class="calc-button number" />
+        <input type="button" value="3" data-number class="calc-button number" />
+        <input type="button" value="+" data-operator class="calc-button operator plus" />
 
-        <input type="button" value="0" data-number class="calc-button number" id="zero" />
-        <input type="button" value="." data-number class="calc-button number" id="point" />
-        <input type="submit" value="=" data-equals class="calc-button equals" id="equals" />
+        <input type="button" value="0" data-number class="calc-button number" />
+        <input type="button" value="." data-number class="calc-button number" />
+
+        <!-- Submit to backend -->
+        <input type="submit" value="=" data-equals class="calc-button equals" />
       </form>
     </div>
 
@@ -69,6 +70,9 @@
       </p>
     </footer>
   </div>
+
+  <!-- JavaScript -->
+  <script src="./js/app.js" type="text/javascript"></script>
 </body>
 
 </html>
